@@ -99,7 +99,7 @@ const pokemones = [
   },
   {
     id: 29,
-    nombre: "Nidoran:signo_femenino:",
+    nombre: "Nidorina",
     tipo: ["Veneno"],
     nivel: 5,
     habilidades: ["Gruñido", "Doble Bofetón"],
@@ -108,7 +108,7 @@ const pokemones = [
   },
   {
     id: 32,
-    nombre: "Nidoran:signo_masculino:",
+    nombre: "Nidoran",
     tipo: ["Veneno"],
     nivel: 5,
     habilidades: ["Picotazo Veneno", "Gruñido"],
@@ -198,7 +198,23 @@ window.onload = function () {
 
     pokemones.forEach(pokemon => {
       if (pokemon.nombre === nombreClickeado) {
-        
+
+        const nombre = document.getElementById('nombrePokemon');
+        const tipoPokemon = document.getElementById('tipo');
+        const nivelPokemon = document.getElementById('nivel');
+        const imagen = document.getElementById('img');
+        const stadisticas = document.getElementById('stats');
+
+        imagen.src = pokemon.imagen;
+        nombre.innerText = pokemon.nombre;
+        tipoPokemon.innerText = 'Tipo: ' + pokemon.tipo;
+        nivelPokemon.innerText = 'Nivel: ' + pokemon.nivel;
+        stadisticas.innerHTML = 
+        '<li>Hp:' + pokemon.stats.hp + '</li>' + 
+        '<li>Ataque: ' + pokemon.stats.ataque + '</li>' + 
+        '<li>Defensa: ' + pokemon.stats.defensa  + '</li>' +
+        '<li>Velocidad: ' + pokemon.stats.velocidad + '</li>';
+
       }
     })
   })
