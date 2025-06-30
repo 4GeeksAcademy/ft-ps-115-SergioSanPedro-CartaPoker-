@@ -1,35 +1,70 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/img/4geeks.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
 
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./assets/img/4geeks.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <title>Hello Rigo with Vanilla.js</title>
+
+  <!-- Fontawesome is our recomended library for icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+</head>
+
+<body>
+  <header class="text-center p-3">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvI9U-ImGqO7fh6lVypwxZCbx0xSa-qLV_LA&s"
+      alt="pokemonLogo" class="w-25 img-fluid">
+    <h1>Bienvendo a la Pokedex-Card</h1>
+  </header>
+
+  <div class="container text-center mt-5" id="pokemons">
+    <div class="row p-5 g-3 m-2">
+      <div class="col-md border border-3 p-3" id="charmander">Charmander</div>
+      <div class="col-md border border-3 p-3" id="bulbasur">Bulbasaur</div>
+      <div class="col-md border border-3 p-3" id="squirtle">Squirtle</div>
+      <div class="col-md border border-3 p-3" id="caterpie">Caterpie</div>
+      <div class="col-md border border-3 p-3" id="weedle">Weedle</div>
+    </div>
+    <div class="row p-5 g-3 m-2">
+      <div class="col-md border border-3 p-3" id="pidgey">Pidgey</div>
+      <div class="col-md border border-3 p-3" id="rattata">Rattata</div>
+      <div class="col-md border border-3 p-3" id="spearow">Spearow</div>
+      <div class="col-md border border-3 p-3" id="pikachu">Pikachu</div>
+      <div class="col-md border border-3 p-3" id="sandshrew">Sandshrew</div>
+    </div>
+    <div class="row p-5 g-3 m-2">
+      <div class="col-md border border-3 p-3" id="nidoran">Nidoran</div>
+      <div class="col-md border border-3 p-3" id="nidorina">Nidorina</div>
+      <div class="col-md border border-3 p-3" id="clefairy">Clefairy</div>
+      <div class="col-md border border-3 p-3" id="vulpix">Vulpix</div>
+      <div class="col-md border border-3 p-3" id="jigglypuff">Jigglypuff</div>
+    </div>
+    <div class="row p-5 g-3 m-2">
+      <div class="col-md border border-3 p-3" id="zubat">Zubat</div>
+      <div class="col-md border border-3 p-3" id="oddish">Oddish</div>
+      <div class="col-md border border-3 p-3" id="paras">Paras</div>
+      <div class="col-md border border-3 p-3" id="diglett">Diglett</div>
+      <div class="col-md border border-3 p-3" id="venonat">Venonat</div>
+    </div>
+
+
+    <div class="card" style="width: 18rem;">
+      <img src="." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Nombre pokemon</h5>
+        <p class="card-text">tipo</p>
+        <p class="card-text">nivel</p>
+        <p class="card-text">stats</p>
+        <button href="#" class="btn btn-primary">Mostrar habilidades</button>
       </div>
     </div>
 
     <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
     <script type="module" src="/app.js"></script>
-  </body>
+</body>
+
 </html>
