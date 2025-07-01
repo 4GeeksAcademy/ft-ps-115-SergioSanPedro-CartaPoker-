@@ -1,6 +1,190 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    
-    background: white;
+body {
+
+    background-image: url('https://i.pinimg.com/736x/d6/b5/d0/d6b5d0a612d62db8878ff7fe46264df2.jpg');
+    object-fit: cover;
+    width: 100vw;
+    height: 100vw;
+}
+
+/* Pokemon selector styling */
+#pokemons .col-md {
+    background: linear-gradient(45deg, #ffffff, #f8f9fa);
+    border-radius: 15px !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    color: #2c3e50;
+    text-transform: capitalize;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#pokemons .col-md:hover {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+}
+
+.pokemon-card {
+    background: linear-gradient(145deg, #f0f0f0, #cacaca);
+    border-radius: 20px;
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.1),
+        0 5px 15px rgba(0, 0, 0, 0.07);
+    border: 8px solid #ffd700;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.15),
+        0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 10px;
+    width: calc(100% - 20px);
+    background: radial-gradient(circle, #ffffff, #f8f9fa);
+    border: 3px solid #e9ecef;
+}
+
+.card-body {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#tipo {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin: 5px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #A8A878, #C6C6A7);
+    /* Default normal type */
+}
+
+
+#nivel {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #34495e;
+    margin: 1rem 0;
+    padding: 8px 12px;
+    background: linear-gradient(45deg, #ecf0f1, #bdc3c7);
+    border-radius: 12px;
+    display: inline-block;
+}
+
+/* Aquí está la solución para centrar las estadísticas */
+#stats {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
+#stats li {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    padding: 10px 15px;
+    margin: 8px auto;
+    border-radius: 12px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: inline-block;
+    min-width: 150px;
+}
+
+#stats li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Diferentes colores para cada estadística */
+#stats li:nth-child(1) {
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+}
+
+/* HP */
+#stats li:nth-child(2) {
+    background: linear-gradient(45deg, #f39c12, #d68910);
+}
+
+/* Ataque */
+#stats li:nth-child(3) {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+}
+
+/* Defensa */
+#stats li:nth-child(4) {
+    background: linear-gradient(45deg, #9b59b6, #8e44ad);
+}
+
+/* Velocidad */
+
+.btn-habilidades {
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+
+.btn-habilidades:hover {
+    background: linear-gradient(45deg, #27ae60, #229954);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
+}
+
+/* Efectos adicionales */
+.pokemon-card .card-body::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
 }

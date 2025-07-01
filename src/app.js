@@ -210,10 +210,10 @@ window.onload = function () {
         tipoPokemon.innerText = 'Tipo: ' + pokemon.tipo;
         nivelPokemon.innerText = 'Nivel: ' + pokemon.nivel;
         stadisticas.innerHTML = 
-        '<li>Hp:' + pokemon.stats.hp + '</li>' + 
-        '<li>Ataque: ' + pokemon.stats.ataque + '</li>' + 
-        '<li>Defensa: ' + pokemon.stats.defensa  + '</li>' +
-        '<li>Velocidad: ' + pokemon.stats.velocidad + '</li>';
+        '<li>💚 Hp:' + pokemon.stats.hp + '</li>' + 
+        '<li>⚔️ Ataque: ' + pokemon.stats.ataque + '</li>' + 
+        '<li>🛡️ Defensa: ' + pokemon.stats.defensa  + '</li>' +
+        '<li>⚡ Velocidad: ' + pokemon.stats.velocidad + '</li>';
 
       }
     })
