@@ -7,9 +7,18 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
+    font-family: 'Nunito', sans-serif;
 }
 
-/* Pokemon selector styling */
+h1 {
+  font-family: 'Orbitron', monospace;
+  font-size: 3.5rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);     /* Fondo negro semitransparente */
+  padding: 20px;
+  border-radius: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
 #pokemons .col-md {
     background: linear-gradient(45deg, #ffffff, #f8f9fa);
     border-radius: 15px !important;

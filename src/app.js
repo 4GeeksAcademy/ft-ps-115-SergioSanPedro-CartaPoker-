@@ -233,7 +233,6 @@ window.onload = function () {
     if (tipoClickeado === "Mostrar Todos") {
 
       // Mostrar todos los pokemon
-      
       listaPokemons.forEach(poke => {
         poke.classList.remove('d-none');
       })
@@ -241,7 +240,6 @@ window.onload = function () {
     } else {
 
       //filtrar
-
       listaPokemons.forEach(poke => {
         poke.classList.add('d-none')
       })
@@ -257,6 +255,76 @@ window.onload = function () {
       })
     }
   })
+
+  //Crear buscador
+  const nameSearch = document.getElementById('inputName');
+  const btnSearch = document.getElementById('searchBtn');
+  const pokemonList = document.querySelectorAll('.col-md');
+
+
+  btnSearch.addEventListener('click', function (event) {
+
+    
+    const targetSeacrh = nameSearch.value.toLowerCase();
+
+
+
+
+    pokemonList.forEach(pokemon => {
+      pokemon.classList.add('d-none')
+    });
+
+    const pokemonEncontrado = pokemones.find(pokemon => pokemon.nombre.toLowerCase() === targetSeacrh)
+
+
+    if (pokemonEncontrado) {
+
+      const nombre = document.getElementById('nombrePokemon');
+      const tipoPokemon = document.getElementById('tipo');
+      const nivelPokemon = document.getElementById('nivel');
+      const imagen = document.getElementById('img');
+      const stadisticas = document.getElementById('stats');
+
+      imagen.src = pokemonEncontrado.imagen;
+      nombre.innerText = pokemonEncontrado.nombre;
+      tipoPokemon.innerText = 'Tipo: ' + pokemonEncontrado.tipo;
+      nivelPokemon.innerText = 'Nivel: ' + pokemonEncontrado.nivel;
+      stadisticas.innerHTML =
+        '<li>💚 Hp:' + pokemonEncontrado.stats.hp + '</li>' +
+        '<li>⚔️ Ataque: ' + pokemonEncontrado.stats.ataque + '</li>' +
+        '<li>🛡️ Defensa: ' + pokemonEncontrado.stats.defensa + '</li>' +
+        '<li>⚡ Velocidad: ' + pokemonEncontrado.stats.velocidad + '</li>';
+
+    } else {
+      // aqui rellenar el titulo de carta con pokemon no encontrado
+
+      const nombre = document.getElementById('nombrePokemon');
+      const tipoPokemon = document.getElementById('tipo');
+      const nivelPokemon = document.getElementById('nivel');
+      const imagen = document.getElementById('img');
+      const stadisticas = document.getElementById('stats');
+
+
+
+      imagen.src = '';
+      nombre.innerText = 'Pokemon no encontrado';
+      tipoPokemon.innerText = 'Tipo: '
+      nivelPokemon.innerText = 'Nivel: '
+      stadisticas.innerHTML =
+        '<li>💚 Hp:' + '</li>' +
+        '<li>⚔️ Ataque: ' + '</li>' +
+        '<li>🛡️ Defensa: ' + '</li>' +
+        '<li>⚡ Velocidad: ' + '</li>';
+
+    }
+
+  });
+
+
+
+
+
+
 
 };
 

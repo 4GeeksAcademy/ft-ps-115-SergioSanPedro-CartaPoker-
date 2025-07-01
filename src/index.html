@@ -42,21 +42,21 @@
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+          <div class="d-flex" role="search">
+            <input class="form-control me-2" type="search" id="inputName" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" id="searchBtn" type="submit">Search</button>
+          </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <div class="text-center p-3">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvI9U-ImGqO7fh6lVypwxZCbx0xSa-qLV_LA&s"
-      alt="pokemonLogo" class="w-25 img-fluid">
+  <!--Titulo pagina-->
+  <div class="text-center p-3 mt-4">
     <h1>Bienvendo a la Pokedex-Card</h1>
   </div>
 
+  <!--Lista de pokemons-->
   <div class="container text-center mt-5" id="pokemons">
     <div class="row p-2 g-3">
       <div class="col-md border border-3 p-3" id="charmander">Charmander</div>
@@ -87,8 +87,8 @@
       <div class="col-md border border-3 p-3" id="venonat">Venonat</div>
     </div>
 
-
-    <div class="card pokemon-card mx-auto p-2 mt-5" style="width: 30rem;">
+    <!--Carta plantilla pokemons-->
+    <div class="card pokemon-card mx-auto p-2 mt-5 mb-5" style="width: 30rem;">
       <img src="" class="card-img-top" alt="" id="img">
       <div class="card-body">
         <h5 class="card-title" id="nombrePokemon">Nombre pokemon</h5>
