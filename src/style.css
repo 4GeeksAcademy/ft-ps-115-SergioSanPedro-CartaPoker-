@@ -3,9 +3,10 @@
 body {
 
     background-image: url('https://i.pinimg.com/736x/d6/b5/d0/d6b5d0a612d62db8878ff7fe46264df2.jpg');
-    object-fit: cover;
-    width: 100vw;
-    height: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 /* Pokemon selector styling */

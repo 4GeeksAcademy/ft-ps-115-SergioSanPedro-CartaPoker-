@@ -190,7 +190,9 @@ const pokemones = [
 ];
 
 window.onload = function () {
-  //write your code here
+
+
+  //Crear las cartas por cada pokemon clickeado
   const listPokemons = document.getElementById('pokemons')
 
   listPokemons.addEventListener('click', function (event) {
@@ -209,15 +211,53 @@ window.onload = function () {
         nombre.innerText = pokemon.nombre;
         tipoPokemon.innerText = 'Tipo: ' + pokemon.tipo;
         nivelPokemon.innerText = 'Nivel: ' + pokemon.nivel;
-        stadisticas.innerHTML = 
-        '<li>💚 Hp:' + pokemon.stats.hp + '</li>' + 
-        '<li>⚔️ Ataque: ' + pokemon.stats.ataque + '</li>' + 
-        '<li>🛡️ Defensa: ' + pokemon.stats.defensa  + '</li>' +
-        '<li>⚡ Velocidad: ' + pokemon.stats.velocidad + '</li>';
+        stadisticas.innerHTML =
+          '<li>💚 Hp:' + pokemon.stats.hp + '</li>' +
+          '<li>⚔️ Ataque: ' + pokemon.stats.ataque + '</li>' +
+          '<li>🛡️ Defensa: ' + pokemon.stats.defensa + '</li>' +
+          '<li>⚡ Velocidad: ' + pokemon.stats.velocidad + '</li>';
 
       }
     })
   })
 
 
+
+  //Crear el filtro por tipo
+  const filtro = document.querySelector('.filter');
+  const listaPokemons = document.querySelectorAll('.col-md');
+
+  filtro.addEventListener('click', function (event) {
+    const tipoClickeado = event.target.textContent;
+
+    if (tipoClickeado === "Mostrar Todos") {
+
+      // Mostrar todos los pokemon
+      
+      listaPokemons.forEach(poke => {
+        poke.classList.remove('d-none');
+      })
+
+    } else {
+
+      //filtrar
+
+      listaPokemons.forEach(poke => {
+        poke.classList.add('d-none')
+      })
+
+
+      pokemones.forEach(pokemon => {
+        if (pokemon.tipo.includes(tipoClickeado)) {
+
+          const divPokemon = document.getElementById(pokemon.nombre.toLowerCase());
+          divPokemon.classList.remove('d-none');
+
+        }
+      })
+    }
+  })
+
 };
+
+
