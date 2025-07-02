@@ -18,18 +18,21 @@ window.onload = function () {
 
     const numerosRandom = Math.floor(Math.random() * numeros.length);
     const palosRandom = Math.floor(Math.random() * palos.length);
-    console.log(numeros[numerosRandom]);
-    console.log(palos[palosRandom]);
 
-    cambiarNumero.textContent = numeros[numerosRandom]
+
+    cambiarNumero.textContent = numeros[numerosRandom];
 
     cambiarPalos.forEach(palo => {
 
+      if (palos[palosRandom] === '♦' || palos[palosRandom] === '♥') {
+        palo.style.color = 'red'
+
+      } else {
+        palo.style.color = 'black'
+      }
+      
       palo.textContent = palos[palosRandom];
-
     })
-
-
   })
 
 
