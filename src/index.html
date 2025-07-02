@@ -16,91 +16,18 @@
 
 <body>
 
-
-  <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Pokedex-Card-Generator</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Filtrar por:
-              </a>
-              <ul class="dropdown-menu filter">
-                <li><a class="dropdown-item" href="#">Fuego</a></li>
-                <li><a class="dropdown-item" href="#">Bicho</a></li>
-                <li><a class="dropdown-item" href="#">Tierra</a></li>
-                <li><a class="dropdown-item" href="#">Agua</a></li>
-                <li><a class="dropdown-item" href="#">Hada</a></li>
-                <li><a class="dropdown-item" href="#">Mostrar Todos</a></li>
-              </ul>
-            </li>
-          </ul>
-          <div class="d-flex" role="search">
-            <input class="form-control me-2" type="search" id="inputName" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-success" id="searchBtn" type="submit">Search</button>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!--Titulo pagina-->
-  <div class="text-center p-3 mt-4">
-    <h1>Bienvendo a la Pokedex-Card</h1>
+  <div class="container d-flex justify-content-center">
+    <div class="card rounded rounded-3 bg-ligth p-2 mt-5">
+      <p class="palos palos-sup text-start">♦ ♥ ♠ ♣</p>
+      <p class="numeros" id="numero">8</p>
+      <p class="palos palos-inf">♦ ♥ ♠ ♣</p>
+    </div>
+    <button class="btn btn-warning btn-lg botonRandom" id="btn-random">Carta aleatoria</button>
   </div>
 
-  <!--Lista de pokemons-->
-  <div class="container text-center mt-5" id="pokemons">
-    <div class="row p-2 g-3">
-      <div class="col-md border border-3 p-3" id="charmander">Charmander</div>
-      <div class="col-md border border-3 p-3" id="bulbasaur">Bulbasaur</div>
-      <div class="col-md border border-3 p-3" id="squirtle">Squirtle</div>
-      <div class="col-md border border-3 p-3" id="caterpie">Caterpie</div>
-      <div class="col-md border border-3 p-3" id="weedle">Weedle</div>
-    </div>
-    <div class="row p-2 g-3">
-      <div class="col-md border border-3 p-3" id="pidgey">Pidgey</div>
-      <div class="col-md border border-3 p-3" id="rattata">Rattata</div>
-      <div class="col-md border border-3 p-3" id="spearow">Spearow</div>
-      <div class="col-md border border-3 p-3" id="pikachu">Pikachu</div>
-      <div class="col-md border border-3 p-3" id="sandshrew">Sandshrew</div>
-    </div>
-    <div class="row p-2 g-3">
-      <div class="col-md border border-3 p-3" id="nidoran">Nidoran</div>
-      <div class="col-md border border-3 p-3" id="nidorina">Nidorina</div>
-      <div class="col-md border border-3 p-3" id="clefairy">Clefairy</div>
-      <div class="col-md border border-3 p-3" id="vulpix">Vulpix</div>
-      <div class="col-md border border-3 p-3" id="jigglypuff">Jigglypuff</div>
-    </div>
-    <div class="row p-2 g-3">
-      <div class="col-md border border-3 p-3" id="zubat">Zubat</div>
-      <div class="col-md border border-3 p-3" id="oddish">Oddish</div>
-      <div class="col-md border border-3 p-3" id="paras">Paras</div>
-      <div class="col-md border border-3 p-3" id="diglett">Diglett</div>
-      <div class="col-md border border-3 p-3" id="venonat">Venonat</div>
-    </div>
 
-    <!--Carta plantilla pokemons-->
-    <div class="card pokemon-card mx-auto p-2 mt-5 mb-5" style="width: 30rem;">
-      <img src="" class="card-img-top" alt="" id="img">
-      <div class="card-body">
-        <h5 class="card-title" id="nombrePokemon">Nombre pokemon</h5>
-        <p class="card-text" id="tipo">tipo</p>
-        <p class="card-text" id="nivel">nivel</p>
-        <ul class="" id="stats"></ul>
-        <button href="#" class="btn btn-primary btn-habilidades" id="habilidades">Mostrar habilidades</button>
-      </div>
-    </div>
-
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-    <script type="module" src="/app.js"></script>
-</body>
+  <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
+  <script type="module" src="/app.js"></script>
+</body>>
 
 </html>
