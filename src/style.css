@@ -9,7 +9,6 @@ body {
     width: 300px;
     height: 400px;
     background: white;
-    border: 2px solid black;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease;
 }
@@ -23,7 +22,9 @@ body {
     color: black;
     font-size: 3rem;
 }
-
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
 .numeros {
     font-size: 4rem;
     font-weight: bold;
