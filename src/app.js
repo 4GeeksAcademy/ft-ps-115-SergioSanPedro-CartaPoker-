@@ -14,11 +14,10 @@ window.onload = function () {
   const cambiarPalos = document.querySelectorAll('.palos');
   const cambiarBoton = document.getElementById('btn-random');
 
-  cambiarBoton.addEventListener('click', function () {
+  const generarCartaAleatoria = () => {
 
     const numerosRandom = Math.floor(Math.random() * numeros.length);
     const palosRandom = Math.floor(Math.random() * palos.length);
-
 
     cambiarNumero.textContent = numeros[numerosRandom];
 
@@ -30,15 +29,14 @@ window.onload = function () {
       } else {
         palo.style.color = 'black'
       }
-      
+
       palo.textContent = palos[palosRandom];
-    })
-  })
+    });
 
+  }
 
+  cambiarBoton.addEventListener('click', generarCartaAleatoria);
 
-
-
-
+  setInterval(generarCartaAleatoria, 5000)
 
 }
